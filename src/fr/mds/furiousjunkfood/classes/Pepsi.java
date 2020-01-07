@@ -6,11 +6,8 @@ public class Pepsi extends ColdDrink{
 	private float price;
 	
 	public Pepsi() {
-		this.name = "Pepsi";
-		this.price = (float) 1.5;
-	}
+		super("Pepsi",1.5f);
 	
-	@Override
-	public String toString() {
-		return "La boisson " + name + " bouteille en "+ super.packing() + " au prix de "+ price + " euros";	}
+	}
+
 }

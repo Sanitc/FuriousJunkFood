@@ -6,11 +6,13 @@ import fr.mds.furiousjunkfood.interfaces.Packing;
 public abstract class ColdDrink implements Item {
 
 	private String name;
-	private Packing packing;
 	private float price;
+	private Packing packing;
 	
-	public ColdDrink() {
+	public ColdDrink(String name, float price) {
 		this.packing = new Bottle();
+		this.name = name;
+		this.price = price;
 	}
 	
 	@Override
@@ -31,7 +33,7 @@ public abstract class ColdDrink implements Item {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "nom : " + this.name + "\n prix : "+price;
+		return "La boisson " + name + " bouteille en "+ packing() + " au prix de "+ price + " euros";
 	}
 
 }

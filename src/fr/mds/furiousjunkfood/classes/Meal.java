@@ -9,26 +9,28 @@ import fr.mds.furiousjunkfood.interfaces.Item;
 
 public class Meal {
 	
-	List<Item>monMenu = new ArrayList<Item>();
+	private List<Item> monMenu = new ArrayList<Item>();
 	
 	public void addItem(Item item) {
 		this.monMenu.add(item);
 	}
 	
 	public float getCost() {
-	float cout = 0;
+		float cout = 0;
+		
 		for (Item item : monMenu) {
 			cout += item.price();
 		}
+		
 		return cout;
 	}
 	
 	public void showItems() {
 		System.out.println("Ce menu contient : ");
 		for (Item item : monMenu) {
-//			System.out.println(item.name());
-//			System.out.println(item.price());
-			System.out.println(item);
+			System.out.println(item.name());
+			System.out.println(item.price());
+//			System.out.println(item);
 			
 		}
 	}

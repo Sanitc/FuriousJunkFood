@@ -9,8 +9,10 @@ public abstract class Burger implements Item{
 	private float price;
 	private Packing packing;
 
-	public Burger() {
+	public Burger(String name, float price) {
 		this.packing = new Wrapper();
+		this.name = name;
+		this.price = price;
 	}
 	@Override
 	public String name() {
@@ -27,10 +29,10 @@ public abstract class Burger implements Item{
 		return this.price;
 	}
 	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "nom : " + this.name + "\n prix : "+price;
+		return "Le burger " + name + " emballage en "+ packing + " au prix de "+ price + " euros";
 	}
-
 }

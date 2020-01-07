@@ -6,13 +6,7 @@ public class Coke extends ColdDrink {
 	private float price;
 	
 	public Coke() {
-		this.name = "Breizh Cola";
-		this.price = (float) 1.3;
+		super("Breizh Cola",1.3f);
 	}
-	
-	
-	@Override
-	public String toString() {
-		return "La boisson " + name + " bouteille en "+ super.packing() + " au prix de "+ price + " euros";
-	}
+
 }

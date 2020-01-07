@@ -1,11 +1,10 @@
 package fr.mds.furiousjunkfood.classes;
 
 import fr.mds.furiousjunkfood.interfaces.Item;
-import fr.mds.furiousjunkfood.interfaces.Packing;
 
 public class MealBuilder {
 	
-	Meal monMenu = new Meal();
+	private Meal monMenu = new Meal();
 	
 	public MealBuilder prepareVegMeal() {
 		VegBurger burgerVege = new VegBurger();
