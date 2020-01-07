@@ -3,23 +3,14 @@ package fr.mds.furiousjunkfood.classes;
 public class BuildPatternDemo {	
 	public static void main(String[] args) {
 		
-//		Pepsi peps = new Pepsi();
-//		System.out.println(peps);
-//		
-//		VegBurger veg = new VegBurger();
-//		System.out.println(veg);
-//		
-//		Coke coca = new Coke();
-//		System.out.println(coca);
-//		
-//		ChickenBurger chick = new ChickenBurger();
-//		System.out.println(chick);
+		MealBuilder monMealVege = new MealBuilder();
+		MealBuilder monMeal = new MealBuilder();
+		MealBuilder monMealPerso = new MealBuilder();
 		
 		System.err.println("---------------");
 		
-		MealBuilder monMeal = new MealBuilder();
 		//Menu vegetarien
-		Meal vegMenu = monMeal.prepareVegMeal().build();
+		Meal vegMenu = monMealVege.prepareVegMeal().build();
 		System.out.println("Menu vegetarien");
 		vegMenu.showItems();
 		System.out.println("Prix total : "+ vegMenu.getCost());
@@ -35,10 +26,10 @@ public class BuildPatternDemo {
 		System.err.println("---------------");
 		
 		//Menu personalise
-		Meal menuPerso = monMeal.prepareNonVegMeal().addItem(new ChickenBurger()).build();
+		Meal menuPerso = monMealPerso.prepareNonVegMeal().addItem(new ChickenBurger()).build();
 		System.out.println("Menu perso");
 		menuPerso.showItems();
-		System.out.println("Prix total : "+ menuPerso.getCost());
+		System.out.println("Prix total : "+ menuPerso.getCost() + " €");
 		
 		System.err.println("---------------");
 	}
