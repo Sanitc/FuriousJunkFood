@@ -13,7 +13,7 @@ public class BuildPatternDemo {
 		Meal vegMenu = monMealVege.prepareVegMeal().build();
 		System.out.println("Menu vegetarien");
 		vegMenu.showItems();
-		System.out.println("Prix total : "+ vegMenu.getCost());
+		System.out.println("Prix total : "+ vegMenu.getCost() + " €");
 		
 		System.err.println("---------------");
 		
@@ -21,7 +21,7 @@ public class BuildPatternDemo {
 		Meal carneMenu = monMeal.prepareNonVegMeal().build();
 		System.out.println("Menu normal");
 		carneMenu.showItems();
-		System.out.println("Prix total : "+ carneMenu.getCost());
+		System.out.println("Prix total : "+ carneMenu.getCost() + " €");
 		
 		System.err.println("---------------");
 		
@@ -32,5 +32,6 @@ public class BuildPatternDemo {
 		System.out.println("Prix total : "+ menuPerso.getCost() + " €");
 		
 		System.err.println("---------------");
+		
 	}
 }
