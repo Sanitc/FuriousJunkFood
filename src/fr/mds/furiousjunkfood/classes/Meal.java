@@ -28,7 +28,7 @@ public class Meal {
 	public void showItems() {
 		System.out.println("Ce menu contient : ");
 		for (Item item : monMenu) {
-			System.out.println("un(e) "+ item.name() + " au prix de " + item.price() + " €");
+			System.out.println("un(e) "+ item.name() + " servit dans du " + item.packing() + " au prix de " + item.price() + " €");
 			
 		}
 	}
